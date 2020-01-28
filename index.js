@@ -6,7 +6,7 @@ function dwarfRollCall(dwarves) {
   var list = ""                   
   
   //for loop to utilize the values in the array only
-  for(var i = 0; i < dwarves.length; i++){ 
+  for(var i = 0; i < dwarves.length/2; i++){ 
     
     //add to the empty string with +=
     
@@ -87,7 +87,7 @@ function findTheCheese (foods) {
     //if statement in order to condition which food is considered a cheese
     
     //in this case the only type of cheese that is given in the array is "cheddar"
-    if(foods[i] === "cheddar"){
+    if(foods[i] === "cheddar" || foods[i] == "swiss" || foods[i] == "camembert"){
       
       //interpolate the value of the array that is a cheese, returning as a string
       return `${foods[i]}`
@@ -96,4 +96,19 @@ function findTheCheese (foods) {
   
   //otherwise, when the loop ends return "no cheese!"
   return "no cheese!"
+}
+
+//return a new array with only words that start with 'b' 
+function wordsWithB(words){ [ "bob", "cab" ]
+  var array = []
+  
+  for(var i = 0; i < words.length; i++){
+    
+    // words[i].startsWith('b')
+    if(words[i].indexOf('b') === 0){
+      
+      array.push(words[i]) 
+    }
+  }
+  return array
 }
